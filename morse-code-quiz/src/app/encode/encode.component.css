@@ -1,0 +1,23 @@
+table.encode-decode-table{
+  border-collapse: collapse;
+}
+
+table.encode-decode-table {
+  width: 300px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+button{
+  background-color: red;
+  padding: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+input {
+  width: 90%;
+  max-width: 350px;
+
+}

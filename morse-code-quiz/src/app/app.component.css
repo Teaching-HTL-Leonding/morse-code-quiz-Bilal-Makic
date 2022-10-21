@@ -1,0 +1,22 @@
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 10;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+
+}
+
+li{
+  float: left;
+}
+
+li:not(:first-child){
+  margin-left: 10px;
+}
+
+a{
+  color:white;
+
+}
