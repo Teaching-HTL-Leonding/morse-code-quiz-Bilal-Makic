@@ -1,21 +1,17 @@
-
-
-button{
+button {
   background-color: turquoise;
   padding: auto;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-
 input {
   width: 90%;
   max-width: 350px;
   margin: 15px;
-
 }
 
-input.ng-invalid{
+input.ng-invalid {
   background-color: red;
   color: white;
 }
