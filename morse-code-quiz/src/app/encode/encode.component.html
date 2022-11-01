@@ -1,24 +1,37 @@
 <h1>Encoding Morse Code</h1>
-<h3>Enter plain text in the table:</h3>
-
-<form #f="ngForm">
-<div>
-  <label>Plaintext:
-    <input type="text" id="plaintext" name="plaintext" [(ngModel)]="inputText" pattern="[A-Z-. ]+">
-  </label>
-</div>
-</form>
-
-<button (click)="encode()">Encode</button>
+<h3>Enter plain text:</h3>
 
 <form #f="ngForm">
   <div>
-    <label>Encoded text:
-      <input type="text" id="encodedText" name="encodedText" readonly [(ngModel)]="encodedText">
+    <label
+      >Plaintext:
+      <input
+        type="text"
+        id="plaintext"
+        name="plaintext"
+        [(ngModel)]="inputText"
+        pattern="[A-Z-. ]+"
+        required
+        #plaintext="ngModel"
+      />
+    </label>
+    <p [hidden]="!plaintext.errors">Please use only uppercase Letters</p>
+  </div>
+</form>
+
+<button [hidden]="plaintext.errors" (click)="encode()">Encode</button>
+
+<form #f="ngForm">
+  <div>
+    <label
+      >Encoded text:
+      <input
+        type="text"
+        id="encodedText"
+        name="encodedText"
+        readonly
+        [(ngModel)]="encodedText"
+      />
     </label>
   </div>
-  </form>
-
-
-
-
+</form>
