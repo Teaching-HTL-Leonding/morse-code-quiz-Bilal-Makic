@@ -4,17 +4,21 @@
 <form #f="ngForm">
 <div>
   <label>Plaintext:
-    <input type="text" id="plaintext" name="plaintext">
+    <input type="text" id="plaintext" name="plaintext" [(ngModel)]="inputText" pattern="[A-Z-. ]+">
   </label>
 </div>
 </form>
 
-<button>Encode</button>
+<button (click)="encode()">Encode</button>
 
-<table class="encode-decode-table">
-  <body>
-    <tr>
-      <input type="text" id="encodedText" name="encodedText" readonly>
-    </tr>
-  </body>
-  </table>
+<form #f="ngForm">
+  <div>
+    <label>Encoded text:
+      <input type="text" id="encodedText" name="encodedText" readonly [(ngModel)]="encodedText">
+    </label>
+  </div>
+  </form>
+
+
+
+

@@ -1,20 +1,21 @@
 <h1>Decoding Morse Code</h1>
 <h3>Enter morse code in the table:</h3>
 
-<table class="encode-decode-table">
-<body>
-  <tr>
-    Placeholder
-  </tr>
-</body>
-</table>
+<form #f="ngForm">
+  <div>
+    <label>Encoded Text:
+      <input type="text" id="encodedText" name="encodedText" [(ngModel)]="encodedText">
+    </label>
+  </div>
+  </form>
 
-<button>Encode</button>
+  <button (click)="decode()">Decode</button>
 
-<table class="encode-decode-table">
-  <body>
-    <tr>
-      Placeholder
-    </tr>
-  </body>
-  </table>
+  <form #f="ngForm">
+    <div>
+      <label>Decoded Text:
+        <input type="text" id="decodedText" name="decodedText" readonly [(ngModel)]="decodedText">
+      </label>
+    </div>
+    </form>
+
