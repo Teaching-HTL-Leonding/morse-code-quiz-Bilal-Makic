@@ -13,7 +13,6 @@ export class DecodeComponent {
     this.decodedText = '';
   }
 
-
   public decode(): void {
     const morseCode = [
       /* A */ '.-',
@@ -43,25 +42,23 @@ export class DecodeComponent {
       /* Y */ '-.--',
       /* Z */ '--..',
     ];
-    let letter = ""
-    this.decodedText = ""
-    this.encodedText += " ";
+    let letter = '';
+    this.decodedText = '';
+    this.encodedText += ' ';
     for (let ch of this.encodedText) {
       // HELLO WORLD
       //.... . .-.. .-.. --- / .-- --- .-. .-.. -..
       if (ch !== ' ') {
-        if(ch === "/"){
-          this.decodedText+= " ";
+        if (ch === '/') {
+          this.decodedText += ' ';
+        } else {
+          letter += ch;
         }
-        else{
-        letter += ch;
-        }
-
-      }
-
-      else if (letter !== ""){
-       this.decodedText += String.fromCharCode(morseCode.indexOf(letter) + "A".charCodeAt(0));
-       letter = "";
+      } else if (letter !== '') {
+        this.decodedText += String.fromCharCode(
+          morseCode.indexOf(letter) + 'A'.charCodeAt(0)
+        );
+        letter = '';
       }
     }
   }
